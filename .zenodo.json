@@ -1,0 +1,30 @@
+{
+  "title": "CT-Derived Colonoscopy Coverage Ground-Truth Benchmark",
+  "description": "Code for a multi-geometry CT-derived colonoscopy coverage ground-truth benchmark: a fly-through coverage ground-truth engine, depth-only coverage estimators, a controllable reconstruction-degradation axis, and evaluation / statistics / figure scripts. The coverage ground truth is derived from public HQColon segmentations and is not redistributed here. Accompanies the paper submitted to the International Journal of Computer Assisted Radiology and Surgery (IJCARS).",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Xia, Tian",
+      "orcid": "0009-0001-9697-8550",
+      "affiliation": "Shanghai University of Medicine and Health Sciences"
+    },
+    {
+      "name": "Wan, Jian",
+      "affiliation": "Shanghai Pudong New Area People's Hospital"
+    },
+    {
+      "name": "Sun, Liping",
+      "orcid": "0000-0003-1642-0168",
+      "affiliation": "Shanghai University of Medicine and Health Sciences"
+    }
+  ],
+  "keywords": [
+    "colonoscopy",
+    "coverage estimation",
+    "benchmark",
+    "ground truth",
+    "reconstruction reliability",
+    "selective prediction"
+  ]
+}
