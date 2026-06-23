@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pth
+*.ckpt
+*.egg-info/
+.venv/
+.DS_Store
+# regenerated artifacts / HQColon-derived data (not redistributed)
+data/
+results/
+checkpoints/
+*.nii
+*.nii.gz

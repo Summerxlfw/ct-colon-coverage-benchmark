@@ -1,0 +1,1169 @@
+{
+ "seed": 20260612,
+ "unit": "patient",
+ "pool_criterion": "centerline_ok & watertight & largest_frac>=0.9",
+ "n_patients": 245,
+ "n_usable_scans": 317,
+ "train": [
+  "sub105",
+  "sub440",
+  "sub197",
+  "sub043",
+  "sub571",
+  "sub468",
+  "sub544",
+  "sub213",
+  "sub762",
+  "sub642",
+  "sub085",
+  "sub458",
+  "sub245",
+  "sub408",
+  "sub145",
+  "sub481",
+  "sub465",
+  "sub246",
+  "sub028",
+  "sub177",
+  "sub539",
+  "sub400",
+  "sub325",
+  "sub618",
+  "sub605",
+  "sub006",
+  "sub326",
+  "sub027",
+  "sub426",
+  "sub115",
+  "sub486",
+  "sub095",
+  "sub139",
+  "sub549",
+  "sub688",
+  "sub487",
+  "sub162",
+  "sub303",
+  "sub587",
+  "sub014",
+  "sub015",
+  "sub404",
+  "sub797",
+  "sub815",
+  "sub030",
+  "sub053",
+  "sub202",
+  "sub198",
+  "sub312",
+  "sub513",
+  "sub620",
+  "sub732",
+  "sub353",
+  "sub726",
+  "sub480",
+  "sub290",
+  "sub747",
+  "sub617",
+  "sub399",
+  "sub137",
+  "sub676",
+  "sub106",
+  "sub590",
+  "sub250",
+  "sub789",
+  "sub088",
+  "sub820",
+  "sub658",
+  "sub700",
+  "sub141",
+  "sub091",
+  "sub495",
+  "sub402",
+  "sub161",
+  "sub385",
+  "sub629",
+  "sub636",
+  "sub600",
+  "sub034",
+  "sub026",
+  "sub388",
+  "sub007",
+  "sub061",
+  "sub633",
+  "sub819",
+  "sub322",
+  "sub526",
+  "sub332",
+  "sub550",
+  "sub128",
+  "sub543",
+  "sub111",
+  "sub719",
+  "sub646",
+  "sub788",
+  "sub758",
+  "sub577",
+  "sub706",
+  "sub632",
+  "sub449",
+  "sub791",
+  "sub502",
+  "sub607",
+  "sub068",
+  "sub101",
+  "sub570",
+  "sub427",
+  "sub346",
+  "sub778",
+  "sub540",
+  "sub146",
+  "sub257",
+  "sub448",
+  "sub017",
+  "sub686",
+  "sub340",
+  "sub302",
+  "sub066"
+ ],
+ "cal": [
+  "sub666",
+  "sub052",
+  "sub158",
+  "sub807",
+  "sub616",
+  "sub464",
+  "sub430",
+  "sub041",
+  "sub693",
+  "sub512",
+  "sub547",
+  "sub461",
+  "sub749",
+  "sub059",
+  "sub517",
+  "sub456",
+  "sub384",
+  "sub698",
+  "sub016",
+  "sub466",
+  "sub713",
+  "sub349",
+  "sub319",
+  "sub488",
+  "sub768",
+  "sub490",
+  "sub627",
+  "sub136",
+  "sub397",
+  "sub125",
+  "sub601",
+  "sub062",
+  "sub274",
+  "sub076",
+  "sub220",
+  "sub714",
+  "sub407",
+  "sub003",
+  "sub087",
+  "sub477",
+  "sub239",
+  "sub103",
+  "sub217",
+  "sub305",
+  "sub564",
+  "sub218",
+  "sub343",
+  "sub165",
+  "sub323",
+  "sub556",
+  "sub173",
+  "sub777",
+  "sub433",
+  "sub678"
+ ],
+ "test": [
+  "sub661",
+  "sub519",
+  "sub371",
+  "sub528",
+  "sub703",
+  "sub659",
+  "sub071",
+  "sub649",
+  "sub264",
+  "sub147",
+  "sub631",
+  "sub602",
+  "sub024",
+  "sub589",
+  "sub383",
+  "sub098",
+  "sub231",
+  "sub126",
+  "sub057",
+  "sub453",
+  "sub295",
+  "sub142",
+  "sub651",
+  "sub728",
+  "sub450",
+  "sub457",
+  "sub009",
+  "sub266",
+  "sub182",
+  "sub761",
+  "sub674",
+  "sub783",
+  "sub669",
+  "sub092",
+  "sub438",
+  "sub048",
+  "sub288",
+  "sub473",
+  "sub597",
+  "sub298",
+  "sub038",
+  "sub004",
+  "sub083",
+  "sub799"
+ ],
+ "holdout": [
+  "sub436",
+  "sub559",
+  "sub772",
+  "sub113",
+  "sub012",
+  "sub031",
+  "sub769",
+  "sub604",
+  "sub786",
+  "sub410",
+  "sub643",
+  "sub120",
+  "sub047",
+  "sub074",
+  "sub555",
+  "sub359",
+  "sub215",
+  "sub656",
+  "sub228",
+  "sub155",
+  "sub701",
+  "sub235",
+  "sub459",
+  "sub441",
+  "sub494",
+  "sub286",
+  "sub358",
+  "sub420",
+  "sub729"
+ ],
+ "counts": {
+  "train": 118,
+  "cal": 54,
+  "test": 44,
+  "holdout": 29
+ },
+ "pilot": {
+  "train": [
+   "sub105",
+   "sub440",
+   "sub197",
+   "sub043",
+   "sub571",
+   "sub468",
+   "sub544",
+   "sub213",
+   "sub762",
+   "sub642",
+   "sub085",
+   "sub458",
+   "sub245",
+   "sub408",
+   "sub145",
+   "sub481",
+   "sub465",
+   "sub246",
+   "sub028",
+   "sub177",
+   "sub539",
+   "sub400",
+   "sub325",
+   "sub618",
+   "sub605",
+   "sub006",
+   "sub326",
+   "sub027",
+   "sub426",
+   "sub115",
+   "sub486",
+   "sub095",
+   "sub139",
+   "sub549",
+   "sub688",
+   "sub487",
+   "sub162",
+   "sub303",
+   "sub587",
+   "sub014",
+   "sub015",
+   "sub404",
+   "sub797",
+   "sub815",
+   "sub030",
+   "sub053",
+   "sub202",
+   "sub198"
+  ],
+  "cal": [
+   "sub666",
+   "sub052",
+   "sub158",
+   "sub807",
+   "sub616",
+   "sub464",
+   "sub430",
+   "sub041",
+   "sub693",
+   "sub512",
+   "sub547",
+   "sub461",
+   "sub749",
+   "sub059",
+   "sub517",
+   "sub456",
+   "sub384",
+   "sub698"
+  ],
+  "test": [
+   "sub661",
+   "sub519",
+   "sub371",
+   "sub528",
+   "sub703",
+   "sub659",
+   "sub071",
+   "sub649",
+   "sub264",
+   "sub147",
+   "sub631",
+   "sub602",
+   "sub024",
+   "sub589"
+  ]
+ },
+ "pilot_counts": {
+  "train": 48,
+  "cal": 18,
+  "test": 14
+ },
+ "patient_to_cases": {
+  "sub436": [
+   "colon_239"
+  ],
+  "sub559": [
+   "colon_310"
+  ],
+  "sub772": [
+   "colon_407"
+  ],
+  "sub113": [
+   "colon_085"
+  ],
+  "sub012": [
+   "colon_012"
+  ],
+  "sub031": [
+   "colon_030",
+   "colon_031"
+  ],
+  "sub769": [
+   "colon_404"
+  ],
+  "sub604": [
+   "colon_329",
+   "colon_330"
+  ],
+  "sub786": [
+   "colon_414"
+  ],
+  "sub410": [
+   "colon_231"
+  ],
+  "sub643": [
+   "colon_352",
+   "colon_353"
+  ],
+  "sub120": [
+   "colon_088"
+  ],
+  "sub047": [
+   "colon_044"
+  ],
+  "sub074": [
+   "colon_357"
+  ],
+  "sub555": [
+   "colon_308"
+  ],
+  "sub359": [
+   "colon_206"
+  ],
+  "sub215": [
+   "colon_141"
+  ],
+  "sub656": [
+   "colon_358"
+  ],
+  "sub228": [
+   "colon_150"
+  ],
+  "sub155": [
+   "colon_111"
+  ],
+  "sub701": [
+   "colon_378",
+   "colon_379"
+  ],
+  "sub235": [
+   "colon_152",
+   "colon_153"
+  ],
+  "sub459": [
+   "colon_255",
+   "colon_256"
+  ],
+  "sub441": [
+   "colon_242",
+   "colon_243"
+  ],
+  "sub494": [
+   "colon_278"
+  ],
+  "sub286": [
+   "colon_169"
+  ],
+  "sub358": [
+   "colon_204"
+  ],
+  "sub420": [
+   "colon_234"
+  ],
+  "sub729": [
+   "colon_392"
+  ],
+  "sub661": [
+   "colon_362",
+   "colon_363"
+  ],
+  "sub519": [
+   "colon_290"
+  ],
+  "sub371": [
+   "colon_209"
+  ],
+  "sub528": [
+   "colon_294"
+  ],
+  "sub703": [
+   "colon_380"
+  ],
+  "sub659": [
+   "colon_360",
+   "colon_361"
+  ],
+  "sub071": [
+   "colon_061",
+   "colon_062"
+  ],
+  "sub649": [
+   "colon_355"
+  ],
+  "sub264": [
+   "colon_161",
+   "colon_162"
+  ],
+  "sub147": [
+   "colon_108"
+  ],
+  "sub631": [
+   "colon_346"
+  ],
+  "sub602": [
+   "colon_328"
+  ],
+  "sub024": [
+   "colon_021"
+  ],
+  "sub589": [
+   "colon_323"
+  ],
+  "sub383": [
+   "colon_213"
+  ],
+  "sub098": [
+   "colon_075"
+  ],
+  "sub231": [
+   "colon_151"
+  ],
+  "sub126": [
+   "colon_091"
+  ],
+  "sub057": [
+   "colon_051"
+  ],
+  "sub453": [
+   "colon_248"
+  ],
+  "sub295": [
+   "colon_174"
+  ],
+  "sub142": [
+   "colon_102",
+   "colon_103"
+  ],
+  "sub651": [
+   "colon_356"
+  ],
+  "sub728": [
+   "colon_391"
+  ],
+  "sub450": [
+   "colon_247"
+  ],
+  "sub457": [
+   "colon_251",
+   "colon_252"
+  ],
+  "sub009": [
+   "colon_011"
+  ],
+  "sub266": [
+   "colon_163"
+  ],
+  "sub182": [
+   "colon_123",
+   "colon_124"
+  ],
+  "sub761": [
+   "colon_400"
+  ],
+  "sub674": [
+   "colon_366"
+  ],
+  "sub783": [
+   "colon_412"
+  ],
+  "sub669": [
+   "colon_364",
+   "colon_370"
+  ],
+  "sub092": [
+   "colon_071",
+   "colon_072"
+  ],
+  "sub438": [
+   "colon_240"
+  ],
+  "sub048": [
+   "colon_045"
+  ],
+  "sub288": [
+   "colon_170"
+  ],
+  "sub473": [
+   "colon_265"
+  ],
+  "sub597": [
+   "colon_325"
+  ],
+  "sub298": [
+   "colon_176",
+   "colon_177"
+  ],
+  "sub038": [
+   "colon_038"
+  ],
+  "sub004": [
+   "colon_004",
+   "colon_005"
+  ],
+  "sub083": [
+   "colon_065"
+  ],
+  "sub799": [
+   "colon_424",
+   "colon_425"
+  ],
+  "sub666": [
+   "colon_365"
+  ],
+  "sub052": [
+   "colon_048"
+  ],
+  "sub158": [
+   "colon_112",
+   "colon_113"
+  ],
+  "sub807": [
+   "colon_426"
+  ],
+  "sub616": [
+   "colon_335"
+  ],
+  "sub464": [
+   "colon_259",
+   "colon_260"
+  ],
+  "sub430": [
+   "colon_237"
+  ],
+  "sub041": [
+   "colon_039"
+  ],
+  "sub693": [
+   "colon_374"
+  ],
+  "sub512": [
+   "colon_284",
+   "colon_285"
+  ],
+  "sub547": [
+   "colon_303"
+  ],
+  "sub461": [
+   "colon_257",
+   "colon_258"
+  ],
+  "sub749": [
+   "colon_398"
+  ],
+  "sub059": [
+   "colon_052",
+   "colon_053"
+  ],
+  "sub517": [
+   "colon_288"
+  ],
+  "sub456": [
+   "colon_249",
+   "colon_250"
+  ],
+  "sub384": [
+   "colon_214"
+  ],
+  "sub698": [
+   "colon_375"
+  ],
+  "sub016": [
+   "colon_015",
+   "colon_016"
+  ],
+  "sub466": [
+   "colon_262"
+  ],
+  "sub713": [
+   "colon_384"
+  ],
+  "sub349": [
+   "colon_200",
+   "colon_199"
+  ],
+  "sub319": [
+   "colon_185",
+   "colon_186"
+  ],
+  "sub488": [
+   "colon_275"
+  ],
+  "sub768": [
+   "colon_403"
+  ],
+  "sub490": [
+   "colon_277"
+  ],
+  "sub627": [
+   "colon_341",
+   "colon_342"
+  ],
+  "sub136": [
+   "colon_095"
+  ],
+  "sub397": [
+   "colon_221"
+  ],
+  "sub125": [
+   "colon_089"
+  ],
+  "sub601": [
+   "colon_327"
+  ],
+  "sub062": [
+   "colon_055",
+   "colon_056"
+  ],
+  "sub274": [
+   "colon_164",
+   "colon_165"
+  ],
+  "sub076": [
+   "colon_063",
+   "colon_064"
+  ],
+  "sub220": [
+   "colon_146"
+  ],
+  "sub714": [
+   "colon_385"
+  ],
+  "sub407": [
+   "colon_228"
+  ],
+  "sub003": [
+   "colon_003",
+   "colon_002"
+  ],
+  "sub087": [
+   "colon_067"
+  ],
+  "sub477": [
+   "colon_266"
+  ],
+  "sub239": [
+   "colon_154"
+  ],
+  "sub103": [
+   "colon_078"
+  ],
+  "sub217": [
+   "colon_142"
+  ],
+  "sub305": [
+   "colon_183"
+  ],
+  "sub564": [
+   "colon_311"
+  ],
+  "sub218": [
+   "colon_144",
+   "colon_145"
+  ],
+  "sub343": [
+   "colon_196"
+  ],
+  "sub165": [
+   "colon_118",
+   "colon_119"
+  ],
+  "sub323": [
+   "colon_188"
+  ],
+  "sub556": [
+   "colon_309"
+  ],
+  "sub173": [
+   "colon_120"
+  ],
+  "sub777": [
+   "colon_410"
+  ],
+  "sub433": [
+   "colon_238"
+  ],
+  "sub678": [
+   "colon_369"
+  ],
+  "sub105": [
+   "colon_079"
+  ],
+  "sub440": [
+   "colon_241"
+  ],
+  "sub197": [
+   "colon_129"
+  ],
+  "sub043": [
+   "colon_041",
+   "colon_040"
+  ],
+  "sub571": [
+   "colon_316"
+  ],
+  "sub468": [
+   "colon_263",
+   "colon_264"
+  ],
+  "sub544": [
+   "colon_302"
+  ],
+  "sub213": [
+   "colon_139"
+  ],
+  "sub762": [
+   "colon_402"
+  ],
+  "sub642": [
+   "colon_351"
+  ],
+  "sub085": [
+   "colon_066"
+  ],
+  "sub458": [
+   "colon_253",
+   "colon_254"
+  ],
+  "sub245": [
+   "colon_156",
+   "colon_157"
+  ],
+  "sub408": [
+   "colon_229"
+  ],
+  "sub145": [
+   "colon_105"
+  ],
+  "sub481": [
+   "colon_269",
+   "colon_271",
+   "colon_270"
+  ],
+  "sub465": [
+   "colon_261"
+  ],
+  "sub246": [
+   "colon_158"
+  ],
+  "sub028": [
+   "colon_026",
+   "colon_027"
+  ],
+  "sub177": [
+   "colon_121",
+   "colon_122"
+  ],
+  "sub539": [
+   "colon_295",
+   "colon_296"
+  ],
+  "sub400": [
+   "colon_224"
+  ],
+  "sub325": [
+   "colon_189"
+  ],
+  "sub618": [
+   "colon_338",
+   "colon_339"
+  ],
+  "sub605": [
+   "colon_331"
+  ],
+  "sub006": [
+   "colon_008"
+  ],
+  "sub326": [
+   "colon_190"
+  ],
+  "sub027": [
+   "colon_025"
+  ],
+  "sub426": [
+   "colon_235"
+  ],
+  "sub115": [
+   "colon_087"
+  ],
+  "sub486": [
+   "colon_272"
+  ],
+  "sub095": [
+   "colon_073",
+   "colon_074"
+  ],
+  "sub139": [
+   "colon_097",
+   "colon_098"
+  ],
+  "sub549": [
+   "colon_304"
+  ],
+  "sub688": [
+   "colon_372"
+  ],
+  "sub487": [
+   "colon_273"
+  ],
+  "sub162": [
+   "colon_116",
+   "colon_117"
+  ],
+  "sub303": [
+   "colon_180",
+   "colon_181"
+  ],
+  "sub587": [
+   "colon_321",
+   "colon_322"
+  ],
+  "sub014": [
+   "colon_013"
+  ],
+  "sub015": [
+   "colon_014"
+  ],
+  "sub404": [
+   "colon_226",
+   "colon_227"
+  ],
+  "sub797": [
+   "colon_423"
+  ],
+  "sub815": [
+   "colon_430"
+  ],
+  "sub030": [
+   "colon_029"
+  ],
+  "sub053": [
+   "colon_049",
+   "colon_050"
+  ],
+  "sub202": [
+   "colon_133",
+   "colon_134"
+  ],
+  "sub198": [
+   "colon_130",
+   "colon_131"
+  ],
+  "sub312": [
+   "colon_184"
+  ],
+  "sub513": [
+   "colon_286"
+  ],
+  "sub620": [
+   "colon_340"
+  ],
+  "sub732": [
+   "colon_393"
+  ],
+  "sub353": [
+   "colon_201",
+   "colon_202"
+  ],
+  "sub726": [
+   "colon_389",
+   "colon_390"
+  ],
+  "sub480": [
+   "colon_268"
+  ],
+  "sub290": [
+   "colon_171"
+  ],
+  "sub747": [
+   "colon_396",
+   "colon_397"
+  ],
+  "sub617": [
+   "colon_336",
+   "colon_337"
+  ],
+  "sub399": [
+   "colon_222",
+   "colon_223"
+  ],
+  "sub137": [
+   "colon_096"
+  ],
+  "sub676": [
+   "colon_367"
+  ],
+  "sub106": [
+   "colon_080"
+  ],
+  "sub590": [
+   "colon_324"
+  ],
+  "sub250": [
+   "colon_159"
+  ],
+  "sub789": [
+   "colon_416",
+   "colon_417"
+  ],
+  "sub088": [
+   "colon_068",
+   "colon_069"
+  ],
+  "sub820": [
+   "colon_433"
+  ],
+  "sub658": [
+   "colon_359"
+  ],
+  "sub700": [
+   "colon_376",
+   "colon_377"
+  ],
+  "sub141": [
+   "colon_100"
+  ],
+  "sub091": [
+   "colon_070"
+  ],
+  "sub495": [
+   "colon_279"
+  ],
+  "sub402": [
+   "colon_225"
+  ],
+  "sub161": [
+   "colon_115"
+  ],
+  "sub385": [
+   "colon_215",
+   "colon_216"
+  ],
+  "sub629": [
+   "colon_344",
+   "colon_345"
+  ],
+  "sub636": [
+   "colon_350"
+  ],
+  "sub600": [
+   "colon_326"
+  ],
+  "sub034": [
+   "colon_033"
+  ],
+  "sub026": [
+   "colon_023"
+  ],
+  "sub388": [
+   "colon_217",
+   "colon_218"
+  ],
+  "sub007": [
+   "colon_009",
+   "colon_010"
+  ],
+  "sub061": [
+   "colon_054"
+  ],
+  "sub633": [
+   "colon_349"
+  ],
+  "sub819": [
+   "colon_431",
+   "colon_432"
+  ],
+  "sub322": [
+   "colon_187"
+  ],
+  "sub526": [
+   "colon_292"
+  ],
+  "sub332": [
+   "colon_193"
+  ],
+  "sub550": [
+   "colon_305"
+  ],
+  "sub128": [
+   "colon_092"
+  ],
+  "sub543": [
+   "colon_301"
+  ],
+  "sub111": [
+   "colon_083",
+   "colon_082"
+  ],
+  "sub719": [
+   "colon_387"
+  ],
+  "sub646": [
+   "colon_354"
+  ],
+  "sub788": [
+   "colon_415"
+  ],
+  "sub758": [
+   "colon_399"
+  ],
+  "sub577": [
+   "colon_317"
+  ],
+  "sub706": [
+   "colon_381",
+   "colon_382"
+  ],
+  "sub632": [
+   "colon_348"
+  ],
+  "sub449": [
+   "colon_246"
+  ],
+  "sub791": [
+   "colon_418"
+  ],
+  "sub502": [
+   "colon_280",
+   "colon_281"
+  ],
+  "sub607": [
+   "colon_332"
+  ],
+  "sub068": [
+   "colon_060"
+  ],
+  "sub101": [
+   "colon_077"
+  ],
+  "sub570": [
+   "colon_314"
+  ],
+  "sub427": [
+   "colon_236"
+  ],
+  "sub346": [
+   "colon_198",
+   "colon_197"
+  ],
+  "sub778": [
+   "colon_411"
+  ],
+  "sub540": [
+   "colon_297"
+  ],
+  "sub146": [
+   "colon_107"
+  ],
+  "sub257": [
+   "colon_160"
+  ],
+  "sub448": [
+   "colon_245"
+  ],
+  "sub017": [
+   "colon_017"
+  ],
+  "sub686": [
+   "colon_371"
+  ],
+  "sub340": [
+   "colon_194",
+   "colon_195"
+  ],
+  "sub302": [
+   "colon_179"
+  ],
+  "sub066": [
+   "colon_058"
+  ]
+ },
+ "sha256": "20991c76a9cdb12c3f7f8e5f499d31b4e97ce7e81bf92764de9a4bc6c5f36088"
+}
