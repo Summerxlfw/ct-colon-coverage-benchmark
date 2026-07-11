@@ -1,6 +1,8 @@
-numpy
-scipy
-scikit-image
-SimpleITK
-matplotlib
-torch
+# P11 ct-colon-coverage-benchmark — Python dependencies
+# Label generation (code/engine/*) needs the full stack.
+# Recount/evaluation only (code/recount/recount_mae.py) needs numpy alone.
+numpy>=2.0
+scipy>=1.11
+scikit-image>=0.22
+SimpleITK>=2.3
+# Verified runnable on: python 3.13.2, numpy 2.4.3 (2026-06-29 staging smoke test).

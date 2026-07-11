@@ -10,12 +10,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import coverage_gt_engine as E
 
-SCRATCH = os.environ.get("HQCOLON_DIR", "/Volumes/WD-6TB/coverage_preflight_scratch/hqcolon")
+SCRATCH = os.environ.get("HQCOLON_DIR", "./hqcolon_source")
 ZIP = os.path.join(SCRATCH, "gas-filled.zip")
 TMPROOT = os.path.join(SCRATCH, "_prod_tmp")
 META = os.path.join(SCRATCH, "meta-data.json")
-RESULTS = os.path.join(HERE, "..", "results", "coverage_gt_full435.csv")
-PROG = os.path.join(HERE, "..", "results", "coverage_gt_full435.progress.txt")
+RESULTS = os.path.join(HERE, "..", "results", "coverage_labels.csv")
+PROG = os.path.join(HERE, "..", "results", "coverage_labels.progress.txt")
 CFG = dict(fov_deg=140.0, pose_step_mm=5.0, near_mm=1.0, far_mm=60.0,
            nbins=280, n_seg=6, directions=["ante", "retro"])
 NWORKERS = 6
@@ -105,7 +105,7 @@ def summarize(rows):
     print(f"  CSV: {RESULTS}")
     print("=" * 70)
     # 汇总写文件
-    with open(os.path.join(os.path.dirname(RESULTS), "coverage_gt_full435_summary.json"), "w") as f:
+    with open(os.path.join(os.path.dirname(RESULTS), "coverage_labels_summary.json"), "w") as f:
         json.dump(dict(n_total=len(rows), n_ok=len(ok), n_watertight=len(wt),
                        n_centerline_degenerate=len(degen),
                        n_usable=len(usable), n_patients=npat,

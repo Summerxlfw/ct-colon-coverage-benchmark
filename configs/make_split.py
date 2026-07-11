@@ -5,9 +5,9 @@
 import csv, json, hashlib, os, random
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CSV = os.path.join(HERE, "..", "results", "coverage_gt_full435.csv")
-META = "/Volumes/WD-6TB/coverage_preflight_scratch/hqcolon/meta-data.json"
-OUT = os.path.join(HERE, "split_patients.json")
+CSV = os.path.join(HERE, "..", "results", "coverage_labels.csv")
+META = os.environ.get("HQCOLON_DIR", "./hqcolon_source") + "/meta-data.json"
+OUT = os.path.join(HERE, "patient_split.json")
 SEED = 20260612
 
 # usable 池: centerline_ok & watertight & largest_frac>=0.9 (保守, 干净)

@@ -1,65 +1,75 @@
-# CT-Derived Colonoscopy Coverage Ground-Truth Benchmark
+# ct-colon-coverage-benchmark
 
-Code for the benchmark and experiments in:
+Code for a CT-derived, multi-geometry benchmark of **geometric** colonoscopy
+surface coverage. This repository holds the code that generates the coverage
+ground truth, builds the patient-level split, and recounts the reference
+coverage-MAE leaderboard. The derived data are released as a separate deposit
+(see **Data** below).
 
-> *A Multi-Geometry CT-Derived Coverage Ground-Truth Benchmark for Colonoscopy:
-> Quantitative Evaluation and Characterization of Coverage Estimation under
-> Reconstruction Degradation* (under review, IJCARS).
+> Scope boundary: coverage here is a **geometric surface-visibility fraction**
+> computed from CT-derived colon meshes by a scripted virtual fly-through. It is
+> **not** clinical mucosal-inspection completeness and **not** real colonoscopy
+> video coverage ground truth.
 
-This repository releases the **code** that builds the benchmark and runs the
-evaluation: a fly-through coverage ground-truth engine, depth-only coverage
-estimators, a controllable reconstruction-degradation axis, and the
-evaluation / statistics / figure scripts.
+## What is in this repository
 
-## What this is
+```
+engine/
+  coverage_gt_engine.py      coverage-label generator (mesh -> fly-through -> ray-cast coverage)
+  produce_full_gt.py         batch reproduction entry point
+  render_selected_colons.py  optional visual rendering
+  README.md                  engine pipeline and usage
+configs/
+  make_split.py              patient-level train/cal/test/holdout split generator
+  split_patients.json        the exact split used for the reference leaderboard
+recount/
+  recount_mae.py             independent per-method coverage-MAE leaderboard recount
+```
 
-From each public **HQColon** CT colon segmentation we derive a watertight
-surface and a centerline, simulate an idealized centerline fly-through, and
-ray-cast per-surface seen/unseen labels to obtain an area-weighted *geometric*
-coverage ground truth. On the resulting many-geometry benchmark we evaluate
-depth-only coverage estimation and test reconstruction-reliability-gated
-abstention under a pre-specified effect-size gate.
+## Data
 
-**Scope note.** The ground truth is *geometric* coverage on CT-derived shapes,
-not clinical coverage on real colonoscopy. See the paper for the full bounds of
-the claims.
+The coverage ground truth is **derived from HQColon CT colon segmentations** and
+is released as a separate data deposit (per-case coverage labels, quality-control
+metadata, the patient-level split, reconstruction-degradation records, and the
+reference leaderboard evaluation rows). The deposit link is given in the
+accompanying paper's Data Availability statement. The raw HQColon masks are
+**not** redistributed here; obtain them from the HQColon DOI:
+<https://doi.org/10.17605/OSF.IO/8TKPM> (CC BY 4.0).
 
-## Data is not redistributed here
+## Quick start (recount, no GPU)
 
-The coverage ground truth is **derived from HQColon**, which carries its own
-license. This repository does **not** redistribute HQColon, the derived meshes,
-or the coverage labels. To reproduce the benchmark:
+`recount/recount_mae.py` needs only `numpy`. Place the released leaderboard
+evaluation CSV at `data/coverage_leaderboard_eval.csv`, then:
 
-1. Download HQColon from OSF: <https://doi.org/10.17605/OSF.IO/8TKPM>
-   (read and comply with its license terms).
-2. Run the engine (`engine/`) to regenerate the watertight surfaces,
-   centerlines, and per-surface coverage ground truth.
-3. Build the patient-level split (`configs/make_split.py`). The exact split used
-   in the paper is in `configs/split_patients.json` (SHA-256
-   `20991c76...f36088`; train/cal/test/holdout = 118/54/44/29 patients).
+```bash
+python3 recount/recount_mae.py data/coverage_leaderboard_eval.csv --group-col method
+```
 
-## Layout
+Expected per-method coverage MAE (patient-level macro):
 
-| Path | Contents |
+| method | MAE |
 |---|---|
-| `engine/` | coverage ground-truth engine (mesh, centerline, fly-through, ray-cast) |
-| `training/` | depth-only coverage estimators (model / dataset / train / eval) |
-| `gates/` | evaluation gates (depth-modality, degradation, bootstrap) |
-| `recount/` | statistics / AURC recount and seed verification |
-| `scripts/` | evidence-figure generation (`make_evidence_figures.py`, ...) |
-| `protocol/` | study protocol and metric definition |
-| `configs/` | split construction and the locked patient-level split |
+| oracle_upper | ~0.005 |
+| attentionpool_head | ~0.074 |
+| const_lower | ~0.082 |
+| random | ~0.107 |
+| visible_area_heuristic | ~0.159 |
 
-## Requirements
+To regenerate coverage labels from source meshes (needs the full dependency
+stack in `requirements.txt` and the raw HQColon masks), see `engine/README.md`.
 
-Python 3.10+ and the packages in `requirements.txt`
-(`numpy`, `scipy`, `scikit-image`, `SimpleITK`, `matplotlib`, `torch`).
+## Reuse guidance
 
-## Citation
-
-The BibTeX entry will be added once the paper is accepted.
+- Use the **317 watertight usable** geometries (from 245 patients, of 435
+  processed) for coverage statistics; the full set includes QC-failing cases.
+- Respect the patient-level split: do not mix same-patient scans across
+  train/cal/test/holdout, and do not tune on the test or holdout patients.
+- Do not mix lite-mesh and full-mesh coverage ground truth; the full-mesh
+  outputs are authoritative.
+- Do not interpret these labels as clinical coverage or real-colonoscopy
+  completeness.
 
 ## License
 
-Code in this repository is released under the MIT License (see `LICENSE`).
-HQColon and any data derived from it remain under their respective licenses.
+Code in this repository is released under the MIT License (see `LICENSE`). The
+derived-data deposit carries its own license (CC BY 4.0), as does HQColon.

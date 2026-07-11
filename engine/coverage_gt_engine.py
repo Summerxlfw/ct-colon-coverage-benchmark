@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-覆盖度 GT 引擎 v0 — P11 (selective coverage). 把 CT 充气结肠 mask 转成
+覆盖度 GT 引擎 v0 — P11. 把 CT 充气结肠 mask 转成
 "虚拟内镜 fly-through 看到了哪些表面" 的几何覆盖度真值。
 
 管线: gas-filled lumen mask

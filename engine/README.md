@@ -1,7 +1,7 @@
 # 覆盖度 GT 引擎 (coverage_gt_engine.py) — v0
 
 把 HQColon CT 充气结肠 mask 转成"虚拟内镜 fly-through 几何覆盖度真值"。P11 多几何
-coverage-GT 底座(辅创新2 C003)的可执行实现。**不吃 GPU。**
+多几何 coverage-GT 底座的可执行实现。**不吃 GPU。**
 
 ## 管线
 
